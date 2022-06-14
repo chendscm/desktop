@@ -1,0 +1,76 @@
+pkgname=chendsystem-desktop
+pkgver=1
+pkgrel=1
+arch=(any)
+install=$pkgname.install
+depends=(
+	# system
+	cups #  打印
+	alacritty
+
+	# nvidia
+	nvidia
+
+	# web & network
+	firefox
+
+	# desktop
+	i3-wm
+ 	i3blocks
+	i3lock
+	i3status
+        # sway
+        sway
+        swaylock
+        swayidle
+	dmenu
+
+	# office
+	libreoffice-fresh
+	# pdf
+	zathura
+	zathura-cb
+	zathura-djvu
+	zathura-pdf-mupdf
+	zathura-ps
+
+	# fonts
+	wqy-bitmapfont
+	wqy-microhei
+	wqy-zenhei
+	adobe-source-han-sans-cn-fonts
+
+	# i18n
+	fcitx5-chinese-addons-git
+	fcitx5-git
+	fcitx5-gtk-git
+	fcitx5-qt4-git
+	fcitx5-qt5-git
+	fcitx5-configtool-git
+
+	# virtualization
+	ovmf
+	qemu
+	virt-manager
+	virtualbox
+)
+
+source=(qemu.conf
+        https://raw.githubusercontent.com/coraxx/netdata_nv_plugin/master/python_modules/pynvml.py
+        https://raw.githubusercontent.com/coraxx/netdata_nv_plugin/master/nv.chart.py
+        https://raw.githubusercontent.com/coraxx/netdata_nv_plugin/master/nv.conf)
+md5sums=('429cd7c0aba6bb70271f3dbc0a669096'
+         SKIP SKIP SKIP)
+
+package() {
+	cd ${pkgdir}
+	mkdir -p "${pkgdir}/etc/netdata/python.d/"
+	mkdir -p "${pkgdir}/opt/chendsystem/etc/libvirt/"
+	mkdir -p "${pkgdir}/usr/lib/netdata/python.d/python_modules/"
+
+	install -m 644 "${srcdir}/pynvml.py" "${pkgdir}/usr/lib/netdata/python.d/python_modules/"
+	install -m 644 "${srcdir}/nv.chart.py" "${pkgdir}/usr/lib/netdata/python.d/"
+	install -m 644 "${srcdir}/nv.conf" "${pkgdir}/etc/netdata/python.d/"
+
+	install -m 755 "${srcdir}/qemu.conf" "${pkgdir}/opt/chendsystem/etc/libvirt/"
+}
