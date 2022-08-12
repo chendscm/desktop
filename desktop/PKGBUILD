@@ -24,6 +24,8 @@ depends=(
         swaylock
         swayidle
 	dmenu
+        foot
+        polkit
 
 	# office
 	libreoffice-fresh
