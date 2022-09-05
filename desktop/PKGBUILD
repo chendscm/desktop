@@ -51,10 +51,14 @@ depends=(
 	fcitx5-configtool-git
 
 	# virtualization
+        virtualbox
+        virtualbox-guest-iso
+        virtualbox-host-modules-arch
+        virtualbox-guest-utils
+        virtualbox-ext-vnc
 	ovmf
 	qemu
 	virt-manager
-	virtualbox
 )
 
 source=(qemu.conf
