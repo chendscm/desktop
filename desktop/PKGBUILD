@@ -59,6 +59,9 @@ depends=(
 	ovmf
 	qemu
 	virt-manager
+        virt-viewer
+        ebtables
+        dnsmasq
 )
 
 source=(qemu.conf

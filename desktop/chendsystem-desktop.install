@@ -1,8 +1,8 @@
 post_install() {
-    systemctl enable libvirtd org.cups.cupsd
+    systemctl enable libvirtd org.cups.cupsd virtlogd
     sed -i 's/basic/desktop/g' /etc/docker-btrfs.json
     cp /opt/chendsystem/etc/libvirt/qemu.conf /etc/libvirt/qemu.conf
     ln -s /opt/cuda /usr/local/cuda
-
+    usermod -a -G kvm user
 }
 
