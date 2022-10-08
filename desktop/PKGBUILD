@@ -13,6 +13,7 @@ depends=(
 
 	# web & network
 	firefox
+        chromium
 
 	# desktop
 	i3-wm
@@ -20,12 +21,12 @@ depends=(
 	i3lock
 	i3status
         # sway
-        sway
-        swaylock
-        swayidle
+        #sway
+        #swaylock
+        #swayidle
 	dmenu
-        foot
-        polkit
+        #foot
+        #polkit
 
 	# office
 	libreoffice-fresh
