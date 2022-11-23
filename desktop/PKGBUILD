@@ -43,13 +43,13 @@ depends=(
 	wqy-zenhei
 	adobe-source-han-sans-cn-fonts
 
-	# i18n
-	fcitx5-chinese-addons-git
-	fcitx5-git
-	fcitx5-gtk-git
-	fcitx5-qt4-git
-	fcitx5-qt5-git
-	fcitx5-configtool-git
+	# fcitx5
+        fcitx5
+	fcitx5-chinese-addons
+        fcitx5-qt
+        fcitx5-gtk
+        fcitx5-pinyin-zhwiki
+        fcitx5-configtool
 
 	# virtualization
         virtualbox
