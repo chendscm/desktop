@@ -21,12 +21,12 @@ depends=(
 	i3lock
 	i3status
         # sway
-        #sway
-        #swaylock
-        #swayidle
+        sway
+        swaylock
+        swayidle
+        swaybg
 	dmenu
-        #foot
-        #polkit
+        polkit
 
 	# office
 	libreoffice-fresh
@@ -58,7 +58,9 @@ depends=(
         virtualbox-guest-utils
         virtualbox-ext-vnc
 	ovmf
-	qemu
+	qemu-base
+        qemu-emulators-full
+        tigervnc
 	virt-manager
         virt-viewer
         ebtables
