@@ -12,19 +12,14 @@ depends=(
 	nvidia
 
 	# web & network
-	firefox
         chromium
 
 	# desktop
-	i3-wm
- 	i3blocks
-	i3lock
-	i3status
-        # sway
         sway
         swaylock
         swayidle
         swaybg
+        waybar
 	dmenu
         polkit
 
@@ -45,6 +40,7 @@ depends=(
 
 	# fcitx5
         fcitx5
+	#librime
 	fcitx5-chinese-addons
         fcitx5-qt
         fcitx5-gtk
@@ -52,11 +48,6 @@ depends=(
         fcitx5-configtool
 
 	# virtualization
-        virtualbox
-        virtualbox-guest-iso
-        virtualbox-host-modules-arch
-        virtualbox-guest-utils
-        virtualbox-ext-vnc
 	ovmf
 	qemu-base
         qemu-emulators-full
@@ -65,6 +56,16 @@ depends=(
         virt-viewer
         ebtables
         dnsmasq
+
+        # eaf deps
+        wmctrl
+        nodejs
+        npm
+        python-pyqt6-webengine
+        python-pyqt6
+        python-pyqt6-sip
+        qt6-multimedia
+        libvdpau-va-gl
 )
 
 source=(qemu.conf

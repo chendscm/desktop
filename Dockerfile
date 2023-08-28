@@ -12,8 +12,6 @@ RUN makepkg -i --noconfirm
 # eaf core deps
 #RUN cd /opt/chendsystem/git/emacs-application-framework; ./install-eaf.py --install-core-deps
 
-# Tmp install emacs27 replace emacs28.1
-# RUN yay -U --noconfirm https://archive.archlinux.org/packages/e/emacs/emacs-27.2-2-x86_64.pkg.tar.zst
 
 
 
